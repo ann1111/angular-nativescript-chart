@@ -1,0 +1,109 @@
+<html>
+
+<head>
+    <link
+        href="https://qatmstrial.beehivehcm.com/Content/Plugins/charts/c3-b03125fa.css"
+        rel="stylesheet" />
+    <link
+        href="https://qatmstrial.beehivehcm.com/Content/Plugins/charts/charts.css"
+        rel="stylesheet" />
+</head>
+
+<body>
+
+
+
+    <div class="row crud_toolbox">
+        <div class="col-xs-5 col-md-5">
+            <div class="title">
+                Gender Wise - Head Count
+            </div>
+        </div>
+    </div>
+
+    <div
+        style="border: 1px solid #eee; height: 450px; box-shadow: 2px 2px 5px 2px #D1D1D1; background: white">
+        <div style="padding:7px;  display: flow-root;">
+            <div class="dropdown  pull-right">
+                <a class="dropdown-toggle" id="btntools"
+                    data-toggle="dropdown" style="font-size:13px;">
+                    <i class="icon-only icon-align-justify icon-2x"></i>
+                </a>
+                <ul class="dropdown-menu">
+                    <li>
+                        <a href="#" id="btnPngExport">Export JPG</a>
+                    </li>
+                    <li>
+                        <a href="#" id="btnDataExport">Export Excel</a>
+                    </li>
+                </ul>
+            </div>
+            @*<button id="btnPngExport"
+                class="btn btn-sm btn-white pull-right">Export JPG</button>
+            <button id="btnDataExport"
+                class="btn btn-sm btn-white pull-right">Export Excel</button>
+            *@
+            <select id="filter" class="pull-right btn btn-sm btn-white"
+                style="height:27px;margin-right:5px;">
+                <option>Default</option>
+                <option>Category</option>
+                <option>Grade</option>
+                <option>Gender</option>
+                <option>Department</option>
+                <option>Branch</option>
+                <option>Employee Status</option>
+                <option>Cost Center</option>
+                <option value="Agegroup">Age Group</option>
+            </select>
+            <button id="btnBack" class="btn btn-sm btn-info pull-left">Back
+            </button>
+
+        </div>
+
+        <div id="charttitle"
+            style="text-align:center;font-weight:500;font-family: Arial, Helvetica, sans-serif ">
+        </div>
+        <div id="chart" style="height:360px; width: 90%; margin:30px"></div>
+
+    </div>
+    <script
+        src="https://qatmstrial.beehivehcm.com/js?v=-nuWqwwBin1i3GsEplHkuf3KWhZKRkcvGlp6zdDFKoQ1">
+    </script>
+    <script
+        src="https://qatmstrial.beehivehcm.com/Content/Plugins/charts/d3-3.5.6.min-77adef17.js">
+    </script>
+    <script
+        src="https://qatmstrial.beehivehcm.com/Content/Plugins/charts/c3.min-4c5bef8f.js">
+    </script>
+    <script
+        src="https://qatmstrial.beehivehcm.com/Areas/Analytics/js/saveSvgAsPng.js">
+    </script>
+    <script src="Show1.js"></script>
+    <script>
+        $(document).ready(function() {
+            init();
+        });
+    </script>
+    <style>
+        #backButton {
+            border-radius: 4px;
+            padding: 8px;
+            border: none;
+            font-size: 16px;
+            background-color: #2eacd1;
+            color: white;
+            top: 10px;
+            right: 10px;
+            cursor: pointer
+        }
+
+        .invisible {
+            display: none;
+        }
+    </style>
+
+
+
+</body>
+
+</html>
